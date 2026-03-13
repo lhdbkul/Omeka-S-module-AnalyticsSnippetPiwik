@@ -32,14 +32,14 @@ class Matomo extends AbstractTracker
         $referrer = $this->getUrlReferrer();
         $userAgent = $this->getUserAgent();
 
-        $matomoTracker = new MatomoTracker($siteId, $trackerUrl);
+        $matomoTracker = new MatomoTracker(intval($siteId), $trackerUrl);
 
         $matomoTracker
             ->setUrl($url)
             ->setUrlReferrer($referrer)
             ->setIp($ip)
             ->setUserAgent($userAgent)
-            ->setCustomTrackingParameter('user_id', $userId);
+            ->setCustomTrackingParameter('user_id', strval($userId));
 
         // Specify an API token with at least Admin permission, so the Visitor
         // IP address can be recorded
