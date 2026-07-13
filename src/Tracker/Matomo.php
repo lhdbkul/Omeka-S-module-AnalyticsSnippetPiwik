@@ -78,4 +78,12 @@ class Matomo extends AbstractTracker
     {
         $this->trackNotInlineScript($url, 'error', $event);
     }
+
+    /**
+     * Build the Matomo tracker, so it can be replaced during tests.
+     */
+    protected function createTracker(int $siteId, string $trackerUrl): MatomoTracker
+    {
+        return new MatomoTracker($siteId, $trackerUrl);
+    }
 }
