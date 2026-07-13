@@ -27,15 +27,17 @@ class Matomo extends AbstractTracker
             return;
         }
 
-        $ip = $this->getClientIp();
-        $userId = $this->getUserId();
-        $referrer = $this->getUrlReferrer();
-        $userAgent = $this->getUserAgent();
+        // The settings are stored as strings and the server data may be null,
+        // but MatomoTracker is typed strictly, so all values must be cast.
+        $ip = (string) $this->getClientIp();
+        $userId = (string) $this->getUserId();
+        $referrer = (string) $this->getUrlReferrer();
+        $userAgent = (string) $this->getUserAgent();
 
-        $matomoTracker = new MatomoTracker($siteId, $trackerUrl);
+        $matomoTracker = $this->createTracker((int) $siteId, (string) $trackerUrl);
 
         $matomoTracker
-            ->setUrl($url)
+            ->setUrl((string) $url)
             ->setUrlReferrer($referrer)
             ->setIp($ip)
             ->setUserAgent($userAgent)
