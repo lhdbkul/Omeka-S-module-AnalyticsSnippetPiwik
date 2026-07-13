@@ -7,7 +7,6 @@ if (!class_exists(\Common\TraitModule::class)) {
 }
 
 use Common\TraitModule;
-use Laminas\EventManager\SharedEventManagerInterface;
 use Laminas\ModuleManager\ModuleManager;
 use Omeka\Module\AbstractModule;
 
@@ -44,14 +43,5 @@ class Module extends AbstractModule
             );
             throw new \Omeka\Module\Exception\ModuleCannotInstallException((string) $message);
         }
-    }
-
-    public function attachListeners(SharedEventManagerInterface $sharedEventManager): void
-    {
-        $sharedEventManager->attach(
-            \Omeka\Form\SettingForm::class,
-            'form.add_elements',
-            [$this, 'handleMainSettings']
-        );
     }
 }

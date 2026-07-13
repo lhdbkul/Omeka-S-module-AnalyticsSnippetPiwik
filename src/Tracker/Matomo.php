@@ -44,7 +44,8 @@ class Matomo extends AbstractTracker
         // Specify an API token with at least Admin permission, so the Visitor
         // IP address can be recorded
         // Learn more about token_auth: https://matomo.org/faq/general/faq_114/
-        $tokenAuth = $settings->get('analyticssnippetpiwik_token_auth');
+        $tokenAuth = $this->services->get('Omeka\Cipher')
+            ->decrypt((string) $settings->get('analyticssnippetpiwik_token_auth'));
         if ($tokenAuth) {
             $matomoTracker->setTokenAuth($tokenAuth);
         }
