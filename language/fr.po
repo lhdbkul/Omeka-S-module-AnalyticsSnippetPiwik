@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-13 00:00+0000\n"
+"PO-Revision-Date: 2026-07-13 00:00+0000\n"
+"Last-Translator: Daniel Berthereau <Daniel.fr@Berthereau.net>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: Module.php:47
+#, php-format
+msgid "The module %1$s should be upgraded to version %2$s or later."
+msgstr "Le module %1$s doit être mis à niveau à la version %2$s ou supérieure."
+
+#: src/Form/ConfigForm.php:18
+msgid "Matomo tracker api url"
+msgstr "Url de l’api du traqueur Matomo"
+
+#: src/Form/ConfigForm.php:29
+msgid "Matomo site id"
+msgstr "Id Matomo du site"
+
+#: src/Form/ConfigForm.php:40
+msgid "Matomo token authentication"
+msgstr "Jeton d’authentification Matomo"
+
+#: src/Form/ConfigForm.php:41
+msgid ""
+"API token with at least Admin permission in order to save visitor ip. The "
+"token is stored encrypted when a secret key is set."
+msgstr ""
+"Jeton api avec au moins une permission Admin de façon à enregistrer l’ip du "
+"visiteur. Le jeton est enregistré de manière chiffrée."
+
+#~ msgid "Analytics Snippet Matomo (Piwik)"
+#~ msgstr "Analytics Snippet Matomo (Piwik)"
+
+#~ msgid "Analytics"
+#~ msgstr "Analytics"
