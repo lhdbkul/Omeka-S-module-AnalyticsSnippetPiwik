@@ -1,7 +1,31 @@
 {
     "name": "daniel-km/omeka-s-module-analytics-snippet-piwik",
-    "description": "Omeka S submodule for Analytics Snippet to track json (in particular Omeka S API) and xml (like with OAI-PMH Repository) calls with Matomo (Piwik).",
-    "license": " CECILL-2.1",
+    "type": "omeka-s-module",
+    "description": "Module for Omeka S: Submodule for Analytics Snippet to track json (in particular Omeka S API) and xml (like with OAI-PMH Repository) calls with Matomo (Piwik).",
+    "keywords": [
+        "Omeka S",
+        "Omeka S module",
+        "seo",
+        "tracking",
+        "analytics",
+        "statistics"
+    ],
+    "license": "CECILL-2.1",
+    "homepage": "https://gitlab.com/Daniel-KM/Omeka-S-module-AnalyticsSnippetPiwik",
+    "authors": [
+        {
+            "name": "Daniel Berthereau",
+            "email": "Daniel.packagist@Berthereau.net"
+        }
+    ],
+    "support": {
+        "issues": "https://gitlab.com/Daniel-KM/Omeka-S-module-AnalyticsSnippetPiwik/-/issues",
+        "forum": "https://forum.omeka.org/"
+    },
+    "_require (not set until Omeka S merges PR #2432)": {
+        "omeka/omeka-s": "^4.0",
+        "daniel-km/omeka-s-module-common": "*"
+    },
     "require": {
         "matomo/matomo-php-tracker": "^3.0"
     },
@@ -12,10 +36,10 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "AnalyticsSnippetPiwikTest\\": "test/AnalyticsSnippetPiwikTest/"
+            "AnalyticsSnippetPiwikTest\\": "tests/AnalyticsSnippetPiwikTest/"
         }
     },
     "extra": {
-        "install-name": "AnalyticsSnippetPiwik"
+        "installer-name": "AnalyticsSnippetPiwik"
     }
 }
