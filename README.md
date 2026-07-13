@@ -100,7 +100,7 @@ license.
 Copyright
 ---------
 
-* Copyright Daniel Berthereau, 2017-2025 (see [Daniel-KM] on GitLab)
+* Copyright Daniel Berthereau, 2017-2026 (see [Daniel-KM] on GitLab)
 
 
 [Analytics Snippet Matomo]: https://gitlab.com/Daniel-KM/Omeka-S-module-AnalyticsSnippetPiwik
